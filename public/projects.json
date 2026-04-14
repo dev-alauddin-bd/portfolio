@@ -1,0 +1,497 @@
+[
+  {
+    "id": 2,
+    "title": "CourseMaster - Learning Management System",
+    "thumnail": "/thumnail/cm.png",
+    "description": "Comprehensive LMS featuring modular course architecture, automated Stripe payments, and an auto-graded quiz engine.",
+    "detailedDescription": "CourseMaster is a sophisticated Learning Management System designed for scalable education delivery. It features a modular course architecture with multi-level lesson tracking, secure Stripe integration for automated enrollments via webhooks, and a robust auto-graded quiz system. The platform includes dedicated dashboards for Admins, Instructors, and Students with real-time analytics for revenue and progress tracking.",
+    "features": [
+      "Modular Course Architecture & Lesson Tracking",
+      "Secure Stripe Integration with Webhook Handling",
+      "Auto-Graded Quiz & Assignment System",
+      "Role-Based Dashboards (Admin, Instructor, Student)",
+      "Real-time Revenue & Enrollment Analytics",
+      "Full Curriculum CRUD Management",
+      "Advanced JWT Authentication & Authorization"
+    ],
+    "challenges": [
+      "Implementing complex webhook handling for automated course enrollment",
+      "Designing a flexible and scalable course/module/lesson hierarchy",
+      "Engineering a reliable auto-grading engine for diverse quiz types",
+      "Managing multi-role permissions across a shared platform"
+    ],
+    "screenshots": [
+      "/thumnail/coursemaster.png"
+    ],
+    "technologies": [
+      "Next.js",
+      "Node.js",
+      "Express",
+      "Prisma",
+      "PostgreSQL",
+      "Stripe",
+      "Redux Toolkit",
+      "Tailwind CSS",
+      "Shadcn UI"
+    ],
+    "role": "Lead Full Stack Developer",
+    "duration": "4 months",
+    "teamSize": "Solo Project",
+    "liveUrl": "https://course-master-frontend-flax.vercel.app",
+    "githubUrl": "https://github.com/dev-alauddin-bd/Course_Master_Backend",
+    "category": "Full Stack"
+  },
+  {
+    "id": 1,
+    "title": "Royal Place - Hotel Management",
+    "thumnail": "/thumnail/royal-place.jpeg",
+    "description": "A comprehensive hotel booking system with modern payment integration, real-time room availability, guest management, and an intuitive admin dashboard.",
+    "detailedDescription": "Royal Place Hotel is a full-featured hotel management and booking platform built with modern web technologies. The system offers a seamless experience for both guests and administrators, featuring real-time room availability tracking, secure payment processing through Stripe, and instant booking confirmations via Socket.io. The platform includes an advanced admin dashboard for managing rooms, bookings, and guest information with comprehensive analytics and reporting capabilities.",
+    "features": [
+      "Real-time room availability tracking with Socket.io",
+      "Secure payment integration with Stripe",
+      "User authentication and authorization with JWT",
+      "Admin dashboard with analytics and reporting",
+      "Room management system with pricing and availability",
+      "Booking history and confirmation emails",
+      "Responsive design for all devices",
+      "Advanced search and filter options"
+    ],
+    "challenges": [
+      "Implementing real-time availability updates across multiple users",
+      "Handling race conditions for simultaneous bookings",
+      "Integrating Stripe payment webhooks securely",
+      "Optimizing database queries for performance"
+    ],
+    "screenshots": [
+      "/thumnail/royal-place.jpeg"
+    ],
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Stripe",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Socket.io"
+    ],
+    "role": "Full Stack Developer",
+    "duration": "3 months",
+    "teamSize": "Solo Project",
+    "liveUrl": "https://royal-place.vercel.app",
+    "githubUrl": "https://github.com/Alauddin-24434/royal-palce-frontend",
+    "backendUrl": "https://github.com/Alauddin-24434/royal-palce-backend",
+    "apiUrl": "https://royal-place-api.vercel.app",
+    "swaggerUrl": "https://royal-place-backend-production.up.railway.app/api-docs",
+    "category": "Full Stack"
+  },
+  {
+    "id": 14,
+    "title": "BugZero - AI-Powered Website Diagnostic",
+    "thumnail": "/thumnail/bug.png",
+    "description": "AI-powered web diagnostic system to analyze website performance, structure, and potential issues automatically.",
+    "detailedDescription": "BugZero is an AI-powered automated website scanning engine designed to detect broken links, SEO problems, and performance bottlenecks. It features real-time report generation with structured, user-friendly diagnostic results to help developers optimize their web applications instantly through intelligent analysis.",
+    "features": [
+      "AI-Powered Site Diagnostics & Intelligent Analysis",
+      "Real-time Multi-layered Report Generation",
+      "Automated Scanning for Broken Links & SEO Issues",
+      "Performance Bottleneck Detection & Optimization Tips",
+      "User-friendly Diagnostic Dashboard",
+      "Automated Website Structure Mapping"
+    ],
+    "challenges": [
+      "Integrating AI models for accurate website structural analysis",
+      "Developing a high-speed scanning engine for large-scale websites",
+      "Managing real-time data flow for instant report generation",
+      "Ensuring clean and actionable diagnostic output for non-technical users"
+    ],
+    "screenshots": [
+      "/thumnail/bugzero.png"
+    ],
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Mongoose",
+      "JWT",
+      "REST API",
+      "AI/LLM Integration"
+    ],
+    "role": "Full Stack Developer",
+    "duration": "2 months",
+    "teamSize": "Solo Project",
+    "liveUrl": "https://bug-zero-frontend.vercel.app",
+    "githubUrl": "https://github.com/dev-alauddin-bd/BugZero_Frontend",
+    "backendUrl": "https://github.com/dev-alauddin-bd/BugZero_Backend",
+    "category": "Full Stack"
+  },
+  {
+    "id": 13,
+    "title": "Jubok - Foundation Management",
+    "thumnail": "/thumnail/jubok.png",
+    "description": "Comprehensive investment and donation management platform featuring RBAC, real-time updates, and multi-gateway payments.",
+    "detailedDescription": "Jubok Foundation is an advanced multi-platform solution designed for large-scale investment and donation management. Built with a high-performance architecture, the system utilizes Next.js for the storefront and member portal, and NestJS for a scalable backend API. It features a sophisticated Role-Based Access Control (RBAC) system, real-time activity tracking via Socket.io, and seamless financial operations through integrated payment gateways like SSLCommerz and Stripe.",
+    "features": [
+      "Dynamic Admin & Member Dashboards",
+      "Real-time Notifications via Socket.io",
+      "Multi-gateway Integration (Stripe, SSLCommerz, Bkash)",
+      "Secure RBAC (Super Admin, Admin, Moderator, User)",
+      "Automated Expense Request & Approval Workflow",
+      "Investment Tracking & Member Management",
+      "Multi-language Support (English & Bengali)",
+      "Redis Caching for optimized performance"
+    ],
+    "challenges": [
+      "Orchestrating complex financial transactions across disparate payment systems",
+      "Managing high-concurrency real-time notifications for thousands of members",
+      "Ensuring sub-second API responses through efficient Redis cache invalidation",
+      "Developing a flexible RBAC system to handle hierarchy-based data access"
+    ],
+    "screenshots": [
+      "/thumnail/jubok.png"
+    ],
+    "technologies": [
+      "Next.js",
+      "NestJS",
+      "MongoDB",
+      "Mongoose",
+      "Redux Toolkit",
+      "Socket.io",
+      "Redis",
+      "Stripe",
+      "SSLCommerz",
+      "TypeScript"
+    ],
+    "role": "Lead Full Stack Architect",
+    "duration": "6 months",
+    "teamSize": "Team of 3",
+    "liveUrl": "https://jubok-foundationbd.vercel.app",
+    "githubUrl": "https://github.com/Alauddin-24434/frontend",
+    "backendUrl": "https://github.com/Alauddin-24434/backend",
+    "swaggerUrl": "https://jubokfoundationbackend-production.up.railway.app/docs",
+    "category": "Full Stack"
+  },
+  {
+    "id": 15,
+    "title": "Learn Finity - E-Learning Platform",
+    "thumnail": "/thumnail/learn-finity.jpeg",
+    "description": "A modern, responsive e-learning platform with free and paid courses, authentication, and a lightning-fast user experience.",
+    "detailedDescription": "Learn Finity is a robust education platform designed to democratize learning. It features a scalable course management system, interactive video lessons, and a comprehensive student progress tracker. Built with the MERN stack and enhanced with Next.js, it provides sub-second page transitions and optimized data fetching for a premium learning experience.",
+    "features": [
+      "Dynamic course catalog with high-performance filtering",
+      "Secure enrollment and multi-currency payment system",
+      "Interactive Student Dashboard with progress tracking",
+      "Instructor Portal for curriculum & resource management",
+      "Integrated quiz engine and automated assessment",
+      "Certificate generation engine upon course completion"
+    ],
+    "challenges": [
+      "Optimizing complex video streaming and storage delivery",
+      "Implementing fine-grained content access control for memberships",
+      "Designing a scalable database schema for diverse educational content"
+    ],
+    "screenshots": [
+      "/thumnail/learn-finity.jpeg"
+    ],
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Stripe",
+      "PostgreSQL",
+      "Prisma",
+      "Tailwind CSS",
+      "NextAuth"
+    ],
+    "role": "Lead Full Stack Developer",
+    "duration": "4 months",
+    "teamSize": "Team of 2",
+    "liveUrl": "https://learn-finity.vercel.app",
+    "githubUrl": "https://github.com/Alauddin-24434/learn-finity-frontend",
+    "category": "Full Stack"
+  },
+  {
+    "id": 3,
+    "title": "Car Wash - Booking System",
+    "thumnail": "/thumnail/car-wash.jpeg",
+    "description": "Modern car wash booking platform with service scheduling, real-time slot availability, payment integration, and customer management.",
+    "detailedDescription": "A specialized booking engine tailored for car service centers. It automates the scheduling process, allowing customers to book specific time slots, choose various service packages, and pay online. The administrative backend provides a clear view of daily schedules, staff allocation, and revenue reports.",
+    "features": [
+      "Real-time slot availability checker",
+      "Service package customization",
+      "Automated SMS/Email reminders",
+      "Staff management and service assignment",
+      "Review and rating system",
+      "Multi-location support"
+    ],
+    "challenges": [
+      "Optimizing slot scheduling algorithm to prevent overlaps",
+      "Implementing efficient real-time updates for slot availability",
+      "Creating an intuitive mobile-first booking flow"
+    ],
+    "screenshots": [
+      "/thumnail/car-wash.jpeg"
+    ],
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "Tailwind CSS"
+    ],
+    "role": "Full Stack Architect",
+    "duration": "2 months",
+    "teamSize": "Solo Project",
+    "liveUrl": "https://car-wash-booking-seven.vercel.app",
+    "githubUrl": "https://github.com/Alauddin-24434/car-wash-booking-frontend",
+    "category": "Full Stack"
+  },
+  {
+    "id": 4,
+    "title": "Agri - Management System",
+    "thumnail": "/thumnail/agri.jpeg",
+    "description": "A simple agri management dashboard with analytics and real-time updates.",
+    "detailedDescription": "A specialized dashboard for agricultural data management, helping farmers and organizations track crop health, weather patterns, and resource allocation. It translates complex sensor data into actionable visual insights.",
+    "features": [
+      "Interactive data visualizations with Chart.js",
+      "Resource allocation tracking",
+      "Weather integration and forecasting",
+      "Crop cycle management"
+    ],
+    "technologies": [
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "Chart.js"
+    ],
+    "liveUrl": "https://agri-climatic.vercel.app",
+    "githubUrl": "https://github.com/Alauddin-24434/agri-frontend",
+    "category": "Full Stack",
+    "role": "Backend Engineer",
+    "duration": "2 months",
+    "teamSize": "3 Members",
+    "screenshots": [
+      "/thumnail/agri.jpeg"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Islamic - Learning Platform",
+    "thumnail": "/thumnail/islamic.png",
+    "description": "Platform for online Islamic learning, with courses, user tracking, and analytics.",
+    "detailedDescription": "An educational portal dedicated to Islamic studies, providing a structured curriculum, community forums, and progress tracking for students around the world.",
+    "features": [
+      "Course progress tracking",
+      "Community discussion forums",
+      "Downloadable learning resources",
+      "Mobile-responsive learning environment"
+    ],
+    "technologies": [
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "Tailwind CSS"
+    ],
+    "liveUrl": "https://islami-quote.vercel.app/",
+    "githubUrl": "https://github.com/Alauddin-24434/islamic-Quotes-Management-frontend",
+    "category": "Full Stack",
+    "role": "Full Stack Developer",
+    "duration": "3 months",
+    "teamSize": "Solo Project",
+    "screenshots": [
+      "/thumnail/islamic.png"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Fitness - Tracker App",
+    "thumnail": "/thumnail/fitness.png",
+    "description": "A web app for tracking workouts, goals, and health metrics.",
+    "detailedDescription": "A comprehensive fitness companion that helps users set goals, log daily activities, and monitor their long-term health trends with real-time feedback and motivational alerts.",
+    "features": [
+      "Custom workout builder",
+      "Real-time calorie tracking",
+      "Progressive achievement system",
+      "Social sharing and leaderboards"
+    ],
+    "technologies": [
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "Socket.io"
+    ],
+    "liveUrl": "https://fitness-equipment-and-accessories-frontend.vercel.app",
+    "githubUrl": "https://github.com/Alauddin-24434/Fitness-Equipment-and-Accessories",
+    "category": "Full Stack",
+    "role": "Full Stack Developer",
+    "duration": "2 months",
+    "teamSize": "Solo Project",
+    "screenshots": [
+      "/thumnail/fitness.png"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Academi - Education Platform",
+    "thumnail": "/thumnail/academi.jpeg",
+    "description": "Education platform with course management and student dashboards.",
+    "detailedDescription": "A versatile LMS designed for institutional use, supporting multiple roles like Admin, Teacher, and Student with dedicated dashboards and permissions.",
+    "features": [
+      "Role-based access control",
+      "Interactive student gradebooks",
+      "Online assignment submission",
+      "Teacher communication tools"
+    ],
+    "technologies": [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Chart.js"
+    ],
+    "liveUrl": "https://ict-division-puce.vercel.app",
+    "githubUrl": "https://github.com/Alauddin-24434/ICT-Division",
+    "category": "Full Stack",
+    "role": "Lead Frontend Developer",
+    "duration": "4 months",
+    "teamSize": "4 Members",
+    "screenshots": [
+      "/thumnail/academi.jpeg"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Brand - Shop",
+    "thumnail": "/thumnail/eco2.png",
+    "description": "A marketplace platform for eco-friendly products and services.",
+    "detailedDescription": "A niche e-commerce platform curated for sustainable living. It provides a clean shopping interface for customers focused on reducing their environmental footprint.",
+    "features": [
+      "Secure checkout process",
+      "Product categorization and filtering",
+      "Vendor management system",
+      "Eco-impact tracker for purchases"
+    ],
+    "technologies": [
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "Tailwind CSS"
+    ],
+    "liveUrl": "https://brandshop-react-project.web.app",
+    "githubUrl": "https://github.com/Alauddin-24434/Brand-Shop",
+    "category": "Full Stack",
+    "role": "Full Stack Developer",
+    "duration": "2 months",
+    "teamSize": "Solo Project",
+    "screenshots": [
+      "/thumnail/eco2.png"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Travel - Tips",
+    "thumnail": "/thumnail/social.png",
+    "description": "Dashboard for managing multiple social media accounts and analytics.",
+    "detailedDescription": "A centralized hub for social media managers to schedule posts, monitor engagement metrics, and respond to messages across various platforms from a single interface.",
+    "features": [
+      "Multi-platform post scheduling",
+      "Aggregated engagement analytics",
+      "Real-time notification dashboard",
+      "Automated reporting"
+    ],
+    "technologies": [
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "Socket.io"
+    ],
+    "liveUrl": "https://travel-trips-client.vercel.app/",
+    "githubUrl": "https://github.com/Alauddin-24434/Travel-Tips-Destination-Guides-client",
+    "category": "Full Stack",
+    "role": "Frontend Specialist",
+    "duration": "3 months",
+    "teamSize": "2 Members",
+    "screenshots": [
+      "/thumnail/social.png"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Froot - Delivery App",
+    "thumnail": "/thumnail/froot.png",
+    "description": "Delivery service platform for fresh fruits and groceries.",
+    "detailedDescription": "A sleek, lightweight web interface for a fruit delivery startup, focusing on performance and user-friendly navigation for a primarily mobile audience.",
+    "features": [
+      "Fast-loading product catalog",
+      "Simple cart management",
+      "Location-based delivery estimation",
+      "Clean, vibrant UI design"
+    ],
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "liveUrl": "https://alauddin-24434.github.io/fruit-burst",
+    "githubUrl": "https://github.com/Alauddin-24434/fruit-burst",
+    "category": "Frontend",
+    "role": "Frontend Designer",
+    "duration": "1 month",
+    "teamSize": "Solo Project",
+    "screenshots": [
+      "/thumnail/froot.png"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Flower - Shop Platform",
+    "thumnail": "/thumnail/flower.png",
+    "description": "Platform for selling flowers online with payment integration.",
+    "detailedDescription": "An elegant boutique flower shop website, designed to showcase floral arrangements with high-quality imagery and a simplified purchasing flow.",
+    "features": [
+      "Visual product gallery",
+      "Category sorting (Occasions, Types)",
+      "Simple checkout form",
+      "Contact and inquiry system"
+    ],
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "liveUrl": "https://alauddin-24434.github.io/flower-shop-assignment/",
+    "githubUrl": "https://github.com/Alauddin-24434/flower-shop-assignment",
+    "category": "Frontend",
+    "role": "Frontend Developer",
+    "duration": "1 month",
+    "teamSize": "Solo Project",
+    "screenshots": [
+      "/thumnail/flower.png"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Gamer - Hub",
+    "thumnail": "/thumnail/gamer.png",
+    "description": "A community platform for gamers to connect, share, and track tournaments.",
+    "detailedDescription": "A dynamic landing page and community entry point for competitive gamers, featuring news updates, tournament schedules, and social connectivity points.",
+    "features": [
+      "Dynamic news feed",
+      "Tournament schedule board",
+      "Community social links",
+      "Responsive interactive layouts"
+    ],
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "liveUrl": "https://alauddin-24434.github.io/Gamer-Zone",
+    "githubUrl": "https://github.com/Alauddin-24434/Gamer-Zone",
+    "category": "Frontend",
+    "role": "Frontend Developer",
+    "duration": "1 month",
+    "teamSize": "Solo Project",
+    "screenshots": [
+      "/thumnail/gamer.png"
+    ]
+  }
+]

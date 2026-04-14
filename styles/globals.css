@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* Start from above */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 1s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 1s ease-out;
+}
+
+.animate-slide-in-down {
+  animation: slide-in-down 1s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out both;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out both;
+}
+
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Print-specific styles for A4 single page */
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact; /* For background colors/images */
+    color-adjust: exact;
+    font-size: 10pt; /* Base font size for print */
+  }
+
+  /* Hide elements not needed in print */
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* Adjust main content for A4 page */
+  main {
+    padding: 0 !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Resume content card adjustments for A4 fit */
+  .bg-white.dark\:bg-card {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 15mm 10mm !important; /* Adjusted padding for A4 fit */
+    width: 210mm; /* A4 width */
+    min-height: 297mm; /* A4 height */
+    margin: 0 auto !important;
+    overflow: hidden; /* Ensure content stays within bounds */
+    box-sizing: border-box; /* Include padding in width/height */
+  }
+
+  /* Remove shadows and borders from cards within resume content */
+  .bg-white.dark\:bg-card .mb-6,
+  .bg-white.dark\:bg-card .hover-lift {
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* Reduce margins/paddings for sections to fit on one page */
+  .print\:mb-4 {
+    margin-bottom: 10px !important; /* Reduced margin for cards */
+  }
+  .print\:py-2 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+  .print\:gap-2 {
+    gap: 5px !important;
+  }
+  .print\:gap-1 {
+    gap: 3px !important;
+  }
+  .print\:pl-2 {
+    padding-left: 8px !important;
+  }
+  .print\:border-l-2 {
+    border-left-width: 2px !important;
+  }
+  .print\:space-y-4 > div + div {
+    margin-top: 10px !important; /* Reduced space between project items */
+  }
+  .print\:space-y-1 > div + div {
+    margin-top: 4px !important; /* Reduced space between cert items */
+  }
+
+  /* Adjust font sizes for print to fit more content */
+  .print\:text-lg {
+    font-size: 1.1rem !important;
+  } /* Card titles */
+  .print\:text-base {
+    font-size: 0.95rem !important;
+  } /* Sub-titles like skill categories, project names, cert names */
+  .print\:text-sm {
+    font-size: 0.8rem !important;
+  } /* Paragraphs, list items */
+  .print\:text-xs {
+    font-size: 0.7rem !important;
+  } /* Badges, small text */
+  .print\:text-xxs {
+    font-size: 0.6rem !important;
+  } /* Even smaller for badges if needed */
+  .print\:leading-snug {
+    line-height: 1.2 !important;
+  } /* Tighter line height */
+}

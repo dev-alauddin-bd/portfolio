@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "Code",
+    "title": "Web Development",
+    "description": "Building responsive and scalable web applications"
+  },
+  {
+    "icon": "Palette",
+    "title": "UI/UX Design",
+    "description": "Designing intuitive and beautiful user interfaces"
+  },
+  {
+    "icon": "Server",
+    "title": "Backend Development",
+    "description": "Creating secure and efficient server-side applications"
+  },
+  {
+    "icon": "Search",
+    "title": "SEO Optimization",
+    "description": "Improving website visibility on search engines"
+  }
+]
