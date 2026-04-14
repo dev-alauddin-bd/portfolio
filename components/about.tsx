@@ -49,16 +49,16 @@ export function About() {
       {/* Background Grid - Minimalist */}
       <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none"></div>
       
-      <div className="container mx-auto px-10 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 mb-32 items-end">
-           <div className="lg:w-1/2">
+      <div className="container mx-auto px-6 sm:px-10 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-16 mb-32 items-start lg:items-end">
+            <div className="lg:w-1/2">
               <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-6">/ PHILOSOPHY</span>
-              <h2 className="text-[12vw] sm:text-[10vw] lg:text-[7vw] text-display leading-none">
+              <h2 className="text-4xl sm:text-6xl lg:text-[7vw] text-display leading-none">
                 BUILDING <br />
                 FOR THE <br />
                 <span className="text-primary">FUTURE.</span>
               </h2>
-           </div>
+            </div>
            <div className="lg:w-1/2 max-w-xl pb-4">
               <p className="text-2xl font-medium leading-normal mb-8 border-l-4 border-primary pl-10 py-2">
                 I'm a digital architect specializing in high-performance full-stack ecosystems.

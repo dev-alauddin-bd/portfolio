@@ -104,11 +104,11 @@ export function Skills() {
     <section id="skills" className="py-32 relative overflow-hidden bg-background">
       <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none"></div>
 
-      <div className="container mx-auto px-10 relative z-10">
+      <div className="container mx-auto px-6 sm:px-10 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 mb-20 items-baseline">
           <div className="lg:w-1/2">
             <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-6">/ TECHNICAL CAPABILITIES</span>
-            <h2 className="text-[10vw] lg:text-[6vw] text-display leading-none">
+            <h2 className="text-4xl sm:text-6xl lg:text-[6vw] text-display leading-none">
               TECH <br />
               <span className="text-primary italic">STACK.</span>
             </h2>
@@ -156,7 +156,7 @@ export function Skills() {
                   .map((skill, index) => (
                     <div
                       key={skill.name}
-                      className="bg-background p-8 flex flex-col items-center justify-center gap-6 group transition-colors aspect-square lg:aspect-auto min-h-[12rem] relative"
+                      className="bg-background p-4 sm:p-8 flex flex-col items-center justify-center gap-4 sm:gap-6 group transition-colors aspect-square lg:aspect-auto min-h-[9rem] sm:min-h-[12rem] relative"
                     >
                       <div className="p-4 bg-foreground/5 rounded-2xl group-hover:bg-primary/10 transition-colors">
                         <img

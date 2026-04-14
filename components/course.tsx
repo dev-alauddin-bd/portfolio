@@ -63,28 +63,24 @@ export function CoursesAndCertifications() {
       <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none"></div>
 
       <div className="container mx-auto px-10 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 mb-24 items-baseline border-b border-foreground/10 pb-16">
+        <div className="flex flex-col lg:flex-row gap-16 mb-24 items-baseline pb-16">
            <div className="lg:w-1/2">
               <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-6">/ KNOWLEDGE BASE</span>
-              <h2 className="text-[10vw] lg:text-[7vw] text-display leading-none">
+              <h2 className="text-4xl sm:text-6xl lg:text-[7vw] text-display leading-none">
                 GROWTH <br />
                 <span className="text-primary">& INDEX.</span>
               </h2>
            </div>
-           <div className="lg:w-1/2">
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-md">
-                A non-linear chronicle of academic pursuit and specialized technical certifications.
-              </p>
-           </div>
+         
         </div>
 
         <Tabs defaultValue="courses" className="w-full">
-          <div className="flex border-b border-foreground/10 mb-20">
-             <TabsList className="h-16 p-0 bg-transparent rounded-none flex gap-10">
-                <TabsTrigger value="courses" className="h-16 px-0 bg-transparent rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:text-primary font-black text-[10px] tracking-[0.3em] uppercase transition-all">
+          <div className="flex border-b border-foreground/10 mb-12 sm:mb-20 overflow-x-auto no-scrollbar">
+             <TabsList className="h-16 p-0 bg-transparent rounded-none flex gap-6 sm:gap-10 min-w-max">
+                <TabsTrigger value="courses" className="h-16 px-0 bg-transparent rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:text-primary font-black text-[10px] tracking-[0.3em] uppercase transition-all whitespace-nowrap">
                   01/ ACADEMICS
                 </TabsTrigger>
-                <TabsTrigger value="certifications" className="h-16 px-0 bg-transparent rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:text-primary font-black text-[10px] tracking-[0.3em] uppercase transition-all">
+                <TabsTrigger value="certifications" className="h-16 px-0 bg-transparent rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:text-primary font-black text-[10px] tracking-[0.3em] uppercase transition-all whitespace-nowrap">
                   02/ CREDENTIALS
                 </TabsTrigger>
              </TabsList>
@@ -95,7 +91,7 @@ export function CoursesAndCertifications() {
               {courses.map((course, index) => (
                 <div
                   key={index}
-                  className="group flex flex-col md:flex-row gap-8 md:gap-20 py-12 border-b border-foreground/5 hover:bg-primary/5 transition-colors px-4"
+                  className="group flex flex-col md:flex-row gap-4 sm:gap-20 py-8 sm:py-12 border-b border-foreground/5 hover:bg-primary/5 transition-colors px-4"
                 >
                   <div className="md:w-32">
                      <span className="text-4xl font-black text-foreground/20 tabular-nums">{course.year}</span>
@@ -105,8 +101,8 @@ export function CoursesAndCertifications() {
                         <GraduationCap className="w-4 h-4" />
                         <span className="text-[10px] font-black uppercase tracking-[0.2em]">{course.provider}</span>
                      </div>
-                     <h4 className="text-3xl font-black tracking-tight">{course.title.toUpperCase()}</h4>
-                     <p className="text-muted-foreground max-w-2xl leading-relaxed italic">
+                     <h4 className="text-xl md:text-3xl font-black tracking-tight">{course.title.toUpperCase()}</h4>
+                     <p className="text-muted-foreground text-sm md:text-base max-w-2xl leading-relaxed italic">
                         "{course.description}"
                      </p>
                   </div>
@@ -120,24 +116,24 @@ export function CoursesAndCertifications() {
               {certifications.map((cert, index) => (
                 <div
                   key={index}
-                  className="bg-background p-12 space-y-8 group hover:bg-primary/5 transition-colors relative h-full flex flex-col"
+                  className="bg-background p-6 sm:p-12 space-y-8 group hover:bg-primary/5 transition-colors relative h-full flex flex-col"
                 >
                    <div className="flex justify-between items-start">
-                      <div className="text-6xl font-black text-foreground/5 italic">0{index + 1}</div>
+                      <div className="text-4xl sm:text-6xl font-black text-foreground/5 italic">0{index + 1}</div>
                       <span className="text-[10px] font-black text-primary border border-primary/20 px-4 py-1.5">{cert.year}</span>
                    </div>
                    
                    <div className="space-y-2 flex-grow">
-                      <h4 className="text-2xl font-black leading-tight">{cert.title.toUpperCase()}</h4>
+                      <h4 className="text-xl md:text-2xl font-black leading-tight">{cert.title.toUpperCase()}</h4>
                       <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">{cert.issuer}</p>
                    </div>
 
                    <div className="pt-8 border-t border-foreground/5 space-y-6">
                       <div className="flex items-center gap-4 opacity-50">
                          <span className="text-[8px] font-black uppercase tracking-widest">UID:</span>
-                         <span className="text-[10px] font-mono break-all">{cert.credentialId}</span>
+                         <span className="text-[9px] sm:text-[10px] font-mono break-all">{cert.credentialId}</span>
                       </div>
-                      <Button asChild className="w-full h-14 rounded-none bg-foreground text-background font-black uppercase tracking-widest text-[10px] hover:bg-primary hover:text-primary-foreground transition-all">
+                      <Button asChild className="w-full h-12 sm:h-14 rounded-none bg-foreground text-background font-black uppercase tracking-widest text-[9px] sm:text-[10px] hover:bg-primary hover:text-primary-foreground transition-all">
                         <Link href={cert.viewUrl} target="_blank" rel="noopener noreferrer">
                           VERIFY CREDENTIAL <ExternalLink className="ml-3 w-4 h-4" />
                         </Link>

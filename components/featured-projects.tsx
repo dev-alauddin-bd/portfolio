@@ -41,7 +41,7 @@ export function FeaturedProjects() {
       className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center group relative py-20 border-b border-foreground/10 last:border-none"
     >
       {/* Large Project Number */}
-      <div className="absolute top-10 left-0 text-[15vw] font-black text-foreground/5 pointer-events-none select-none italic translate-x-[-0.2em]">
+      <div className="absolute top-10 left-0 text-[100px] sm:text-[150px] lg:text-[15vw] font-black text-foreground/5 pointer-events-none select-none italic translate-x-[-0.2em]">
         0{index + 1}
       </div>
 
@@ -84,12 +84,12 @@ export function FeaturedProjects() {
             <span className="h-px w-10 bg-primary opacity-50"></span>
             <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px]">SELECTED PROJECT</span>
           </div>
-          <h3 className="text-5xl md:text-6xl font-black tracking-tighter leading-none group-hover:italic transition-all duration-500">
+          <h3 className="text-2xl sm:text-4xl md:text-6xl font-black tracking-tighter leading-none group-hover:italic transition-all duration-500">
             {project.title.toUpperCase()}
           </h3>
         </div>
 
-        <p className="text-muted-foreground leading-relaxed max-w-md">
+        <p className="text-muted-foreground text-sm sm:text-base leading-relaxed max-w-md">
           {project.description}
         </p>
 
@@ -103,7 +103,7 @@ export function FeaturedProjects() {
 
         <Button
           asChild
-          className="h-14 px-10 rounded-none bg-foreground text-background font-black uppercase tracking-widest text-[10px] hover:bg-primary hover:text-primary-foreground transition-all duration-500"
+          className="h-12 sm:h-14 px-8 sm:px-10 rounded-none bg-foreground text-background font-black uppercase tracking-widest text-[9px] sm:text-[10px] hover:bg-primary hover:text-primary-foreground transition-all duration-500"
         >
           <Link href={`/projects/${project.id}`}>
             VIEW ARCHITECTURE
@@ -120,19 +120,15 @@ export function FeaturedProjects() {
       <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none"></div>
 
       <div className="container mx-auto px-10 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 mb-24 items-baseline justify-between border-y border-foreground/10 py-16">
+        <div className="flex flex-col lg:flex-row gap-16 mb-24 items-start lg:items-end justify-between border-b border-foreground/10 py-16">
           <div className="lg:w-1/2">
             <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-6">/ RECENT WORK</span>
-            <h2 className="text-[10vw] lg:text-[7vw] text-display leading-none">
+            <h2 className="text-3xl sm:text-6xl lg:text-[7vw] text-display leading-none">
               SELECTED <br />
               EXHIBITS.
             </h2>
           </div>
-          <div className="lg:w-1/2 flex flex-col items-end gap-10">
-            <p className="text-xl text-muted-foreground max-w-md text-right leading-relaxed">
-              A non-exhaustive chronicle of complex engineering challenges and bespoke digital experiences.
-            </p>
-          </div>
+     
         </div>
 
         <div className="flex flex-col">
@@ -153,11 +149,11 @@ export function FeaturedProjects() {
           <Button
             asChild
             variant="outline"
-            className="px-16 h-20 rounded-none border border-foreground font-black uppercase tracking-widest text-[10px] hover:bg-primary hover:border-primary transition-all group"
+            className="px-8 sm:px-16 h-14 sm:h-20 rounded-none border border-foreground font-black uppercase tracking-widest text-[9px] sm:text-[10px] hover:bg-primary hover:border-primary transition-all group w-full sm:w-auto"
           >
             <Link href="/projects">
               VIEW ALL PROJECTS
-              <ArrowRight className="w-5 h-5 ml-6 group-hover:translate-x-2 transition-transform" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-4 sm:ml-6 group-hover:translate-x-2 transition-transform" />
             </Link>
           </Button>
         </div>

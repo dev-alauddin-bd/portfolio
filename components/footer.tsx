@@ -17,7 +17,14 @@ export function Footer() {
   }, [])
   const currentYear = new Date().getFullYear()
 
-  const footerLinks = [
+  const footerLinks: {
+    title: string;
+    links: {
+      name: string;
+      href: string;
+      icon?: React.ElementType;
+    }[];
+  }[] = [
     {
       title: "Portfolio",
       links: [
@@ -113,12 +120,7 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Massive Background Text Decorative */}
-        <div className="pointer-events-none select-none overflow-hidden h-24 sm:h-32 md:h-48 lg:h-64 flex items-center justify-center opacity-[0.02] border-y border-foreground/5 my-12">
-          <h1 className="text-[20vw] font-black tracking-tighter whitespace-nowrap leading-none grayscale">
-            ALAUDDIN.DEV
-          </h1>
-        </div>
+    
 
         {/* Bottom Metadata Bar */}
         <div className="glass mt-12 px-6 py-6 rounded-2xl flex flex-col md:flex-row justify-between items-center gap-6 border-white/5 dark:bg-zinc-900/50">

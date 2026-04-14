@@ -93,19 +93,14 @@ export default function ProjectDetailPage() {
   if (!project) return null;
 
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden pt-32 pb-24 bg-grid">
-      {/* Background Ornaments */}
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-background via-transparent to-background pointer-events-none z-0"></div>
-      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/20 rounded-full blur-[150px] animate-blob pointer-events-none"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-purple-500/20 rounded-full blur-[150px] animate-blob animation-delay-2000 pointer-events-none"></div>
-      <div className="absolute top-[30%] right-[10%] w-[30%] h-[30%] bg-pink-500/10 rounded-full blur-[120px] animate-blob animation-delay-4000 pointer-events-none"></div>
+    <div className="min-h-screen bg-background relative overflow-hidden pt-32 pb-24">
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 sm:px-10 relative z-10">
         {/* Navigation & Breadcrumb */}
         <div className="mb-8 md:mb-12" data-aos="fade-down">
           <Button
             variant="ghost"
-            className="group hover:bg-primary/10 text-primary font-black uppercase tracking-widest text-[10px] rounded-xl pr-4 md:pr-6"
+            className="group hover:bg-primary/10 text-primary font-black uppercase tracking-widest text-[9px] sm:text-[10px] rounded-xl pr-4 md:pr-6"
             onClick={() => router.back()}
           >
             <ArrowLeft className="mr-2 md:mr-3 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
@@ -115,19 +110,19 @@ export default function ProjectDetailPage() {
         </div>
 
         {/* Hero Section */}
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-end mb-16 md:mb-20">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start lg:items-end mb-16 md:mb-20">
           <div data-aos="fade-right">
             <div className="flex flex-wrap items-center gap-3 mb-6 md:mb-8">
-              <Badge className="bg-primary/20 hover:bg-primary/30 text-primary border-none backdrop-blur-md font-bold uppercase tracking-tighter text-[10px] px-3 md:px-4 py-1.5">
+              <Badge className="bg-primary/20 hover:bg-primary/30 text-primary border-none backdrop-blur-md font-bold uppercase tracking-tighter text-[9px] sm:text-[10px] px-3 md:px-4 py-1.5">
                 {project.category}
               </Badge>
               {project.role && (
-                <Badge variant="outline" className="border-2 border-primary/20 font-bold uppercase tracking-tighter text-[10px] px-3 md:px-4 py-1.5">
+                <Badge variant="outline" className="border-2 border-primary/20 font-bold uppercase tracking-tighter text-[9px] sm:text-[10px] px-3 md:px-4 py-1.5">
                   {project.role}
                 </Badge>
               )}
             </div>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black mb-6 md:mb-8 tracking-tighter leading-[0.95] md:leading-[0.9]">
+            <h1 className="text-3xl sm:text-6xl lg:text-7xl font-black mb-6 md:mb-8 tracking-tighter leading-[0.95] md:leading-[0.9]">
               {project.title.includes('-') ? (
                 <>
                   {project.title.split('-')[0]} <br />
@@ -140,7 +135,7 @@ export default function ProjectDetailPage() {
                 </>
               )}
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+            <p className="text-base md:text-xl text-muted-foreground leading-relaxed max-w-xl">
               {project.description}
             </p>
           </div>
@@ -243,32 +238,32 @@ export default function ProjectDetailPage() {
             <div className="glass p-8 rounded-[2.5rem] border-white/5 space-y-6" data-aos="fade-left">
               <h3 className="text-xs font-black uppercase tracking-[0.25em] text-muted-foreground mb-8">Deployments</h3>
               <div className="space-y-4">
-                <Button asChild className="w-full h-14 rounded-2xl bg-primary hover:shadow-glow font-black uppercase tracking-widest text-[10px]">
+                <Button asChild className="w-full h-12 sm:h-14 rounded-2xl bg-primary hover:shadow-glow font-black uppercase tracking-widest text-[9px] sm:text-[10px]">
                   <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                     <Globe className="mr-3 h-4 w-4" /> Launch Production
                   </a>
                 </Button>
-                <Button asChild variant="outline" className="w-full h-14 rounded-2xl border-2 hover:bg-primary hover:text-white hover:border-primary font-black uppercase tracking-widest text-[10px]">
+                <Button asChild variant="outline" className="w-full h-12 sm:h-14 rounded-2xl border-2 hover:bg-primary hover:text-white hover:border-primary font-black uppercase tracking-widest text-[9px] sm:text-[10px]">
                   <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                     <Github className="mr-3 h-4 w-4" /> Frontend Source
                   </a>
                 </Button>
                 {project.backendUrl && (
-                  <Button asChild variant="outline" className="w-full h-14 rounded-2xl border-2 hover:bg-primary hover:text-white hover:border-primary font-black uppercase tracking-widest text-[10px]">
+                  <Button asChild variant="outline" className="w-full h-12 sm:h-14 rounded-2xl border-2 hover:bg-primary hover:text-white hover:border-primary font-black uppercase tracking-widest text-[9px] sm:text-[10px]">
                     <a href={project.backendUrl} target="_blank" rel="noopener noreferrer">
                       <Server className="mr-3 h-4 w-4" /> Backend Source
                     </a>
                   </Button>
                 )}
                 {project.apiUrl && (
-                  <Button asChild variant="secondary" className="w-full h-14 rounded-2xl bg-white/5 hover:bg-white/10 font-black uppercase tracking-widest text-[10px]">
+                  <Button asChild variant="secondary" className="w-full h-12 sm:h-14 rounded-2xl bg-white/5 hover:bg-white/10 font-black uppercase tracking-widest text-[9px] sm:text-[10px]">
                     <a href={project.apiUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="mr-3 h-4 w-4" /> Inspect API
                     </a>
                   </Button>
                 )}
                 {project.swaggerUrl && (
-                  <Button asChild variant="secondary" className="w-full h-14 rounded-2xl bg-purple-500/10 hover:bg-purple-500/20 text-purple-400 border border-purple-500/20 font-black uppercase tracking-widest text-[10px]">
+                  <Button asChild variant="secondary" className="w-full h-12 sm:h-14 rounded-2xl bg-purple-500/10 hover:bg-purple-500/20 text-purple-400 border border-purple-500/20 font-black uppercase tracking-widest text-[9px] sm:text-[10px]">
                     <a href={project.swaggerUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="mr-3 h-4 w-4" /> REST API Swagger
                     </a>

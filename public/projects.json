@@ -21,7 +21,7 @@
       "Managing multi-role permissions across a shared platform"
     ],
     "screenshots": [
-      "/thumnail/coursemaster.png"
+      "/thumnail/cm.png"
     ],
     "technologies": [
       "Next.js",
@@ -105,7 +105,7 @@
       "Ensuring clean and actionable diagnostic output for non-technical users"
     ],
     "screenshots": [
-      "/thumnail/bugzero.png"
+      "/thumnail/bug.png"
     ],
     "technologies": [
       "Next.js",

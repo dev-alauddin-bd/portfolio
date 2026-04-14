@@ -1,5 +1,5 @@
 import { Header } from "@/components/header";
-import { ScrollToTop } from "@/components/scroll-to-top";
+
 import { ReactNode } from "react";
 
 interface LayoutProps {
@@ -11,7 +11,7 @@ export default function layout({ children }: LayoutProps) {
     <div >
       <Header />
       <main>{children}</main>
-      <ScrollToTop />
+
     </div>
   )
 }

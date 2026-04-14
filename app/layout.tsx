@@ -5,7 +5,7 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { AdminGate } from "@/components/admin-gate"
+
 import { Toaster } from "react-hot-toast"
 import LenisProvider from "./LenisProvider"
 

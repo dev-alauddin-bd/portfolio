@@ -98,17 +98,17 @@ export function Contact() {
     <section id="contact" className="py-32 relative overflow-hidden bg-background">
       <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none"></div>
 
-      <div className="container mx-auto px-10 relative z-10">
+      <div className="container mx-auto px-6 sm:px-10 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 mb-24 items-baseline border-b border-foreground/10 pb-16">
           <div className="lg:w-1/2">
             <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-6">/ INQUIRIES & INDEX</span>
-            <h2 className="text-[10vw] lg:text-[7vw] text-display leading-none">
+            <h2 className="text-4xl sm:text-6xl lg:text-[7vw] text-display leading-none">
               GET IN <br />
               <span className="text-primary">TOUCH.</span>
             </h2>
           </div>
           <div className="lg:w-1/2">
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-md">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-md">
               Always open for ambitious collaborations and technical architectural challenges.
             </p>
           </div>
@@ -123,10 +123,10 @@ export function Contact() {
                   href={info.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block space-y-2 border-l border-foreground/10 pl-10 hover:border-primary transition-all"
+                  className="group block space-y-2 border-l border-foreground/10 pl-6 sm:pl-10 hover:border-primary transition-all"
                 >
                   <p className="text-[10px] font-black uppercase tracking-[0.3em] text-primary">{info.title}</p>
-                  <p className="text-xl md:text-2xl font-black group-hover:italic transition-all">{info.value.toUpperCase()}</p>
+                  <p className="text-lg md:text-2xl font-black group-hover:italic transition-all">{info.value.toUpperCase()}</p>
                 </a>
               ))}
             </div>
@@ -151,12 +151,12 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="lg:col-span-8 p-12 border border-foreground/10 relative">
+          <div className="lg:col-span-8 p-6 sm:p-12 border border-foreground/10 relative">
             <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-primary"></div>
             <div className="absolute bottom-0 left-0 w-16 h-16 border-b border-l border-primary"></div>
 
-            <form onSubmit={handleSubmit} className="space-y-12">
-              <div className="grid md:grid-cols-2 gap-12">
+            <form onSubmit={handleSubmit} className="space-y-8 sm:space-y-12">
+              <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
                 <div className="space-y-4">
                   <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground">IDENTIFICATION</label>
                   <Input
@@ -165,7 +165,7 @@ export function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="h-16 bg-transparent border-x-0 border-t-0 border-b border-foreground/10 focus:border-primary rounded-none px-0 text-sm font-bold tracking-widest transition-all focus-visible:ring-0"
+                    className="h-14 sm:h-16 bg-transparent border-x-0 border-t-0 border-b border-foreground/10 focus:border-primary rounded-none px-0 text-sm font-bold tracking-widest transition-all focus-visible:ring-0"
                   />
                 </div>
                 <div className="space-y-4">
@@ -177,7 +177,7 @@ export function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="h-16 bg-transparent border-x-0 border-t-0 border-b border-foreground/10 focus:border-primary rounded-none px-0 text-sm font-bold tracking-widest transition-all focus-visible:ring-0"
+                    className="h-14 sm:h-16 bg-transparent border-x-0 border-t-0 border-b border-foreground/10 focus:border-primary rounded-none px-0 text-sm font-bold tracking-widest transition-all focus-visible:ring-0"
                   />
                 </div>
               </div>
@@ -190,7 +190,7 @@ export function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="h-16 bg-transparent border-x-0 border-t-0 border-b border-foreground/10 focus:border-primary rounded-none px-0 text-sm font-bold tracking-widest transition-all focus-visible:ring-0"
+                  className="h-14 sm:h-16 bg-transparent border-x-0 border-t-0 border-b border-foreground/10 focus:border-primary rounded-none px-0 text-sm font-bold tracking-widest transition-all focus-visible:ring-0"
                 />
               </div>
 
@@ -210,7 +210,7 @@ export function Contact() {
               <div className="flex justify-end">
                 <Button
                   type="submit"
-                  className="group h-20 px-16 bg-primary text-primary-foreground font-black uppercase tracking-[0.4em] text-[10px] rounded-none hover:bg-foreground hover:text-background transition-all"
+                  className="group h-14 sm:h-20 px-8 sm:px-16 bg-primary text-primary-foreground font-black uppercase tracking-[0.4em] text-[10px] rounded-none hover:bg-foreground hover:text-background transition-all w-full sm:w-auto"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "PROCESSING..." : (

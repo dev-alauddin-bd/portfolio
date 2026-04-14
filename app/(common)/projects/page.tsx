@@ -90,12 +90,12 @@ export default function ProjectsPage() {
               <span className="h-px w-10 bg-primary opacity-50"></span>
               <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px]">SELECTED PROJECT</span>
            </div>
-           <h3 className="text-5xl md:text-6xl font-black tracking-tighter leading-none group-hover:italic transition-all duration-500">
+           <h3 className="text-2xl sm:text-4xl md:text-6xl font-black tracking-tighter leading-none group-hover:italic transition-all duration-500">
              {project.title.toUpperCase()}
            </h3>
         </div>
 
-        <p className="text-muted-foreground leading-relaxed max-w-md">
+        <p className="text-muted-foreground text-sm sm:text-base leading-relaxed max-w-md">
           {project.description}
         </p>
         
@@ -109,7 +109,7 @@ export default function ProjectsPage() {
 
         <Button
           asChild
-          className="h-14 px-10 rounded-none bg-foreground text-background font-black uppercase tracking-widest text-[10px] hover:bg-primary hover:text-primary-foreground transition-all duration-500"
+          className="h-12 sm:h-14 px-8 sm:px-10 rounded-none bg-foreground text-background font-black uppercase tracking-widest text-[9px] sm:text-[10px] hover:bg-primary hover:text-primary-foreground transition-all duration-500"
         >
           <Link href={`/projects/${project.id}`}>
             VIEW ARCHITECTURE
@@ -123,16 +123,16 @@ export default function ProjectsPage() {
     <main className="min-h-screen pt-32 pb-20 bg-background relative overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none"></div>
 
-      <div className="container mx-auto px-10 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 mb-24 items-baseline justify-between border-y border-foreground/10 py-16">
+      <div className="container mx-auto px-6 sm:px-10 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-16 mb-24 items-start lg:items-end justify-between border-y border-foreground/10 py-16">
            <div className="lg:w-1/2">
               <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-6">/ RECENT WORK</span>
-              <h1 className="text-[10vw] lg:text-[7vw] text-display leading-none">
+              <h1 className="text-3xl sm:text-6xl lg:text-[7vw] text-display leading-none">
                 FULL <br />
                 EXHIBITS.
               </h1>
            </div>
-           <div className="lg:w-1/2 flex flex-col items-end gap-10">
+           <div className="lg:w-1/2 flex flex-col items-start lg:items-end gap-10">
               <div className="relative group p-px bg-foreground/10 focus-within:bg-primary transition-colors w-full max-w-sm">
                  <Search className="absolute left-6 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground group-focus-within:text-primary" />
                  <Input

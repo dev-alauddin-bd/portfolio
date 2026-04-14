@@ -4,12 +4,6 @@ import { ArrowRight, Mail, Eye, Download } from "lucide-react"
 import Image from "next/image"
 
 export function Hero() {
-  const handleSmoothScroll = (e: React.MouseEvent, id: string) => {
-    e.preventDefault()
-    const el = document.querySelector(id)
-    if (el) el.scrollIntoView({ behavior: "smooth" })
-  }
-
   return (
     <section id="hero" className="min-h-screen flex items-center pt-28 pb-12 relative overflow-hidden bg-background">
 
@@ -21,37 +15,38 @@ export function Hero() {
               <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-4">
                 Full Stack Architect / 2024-2026
               </span>
-              <h1 className="text-[12vw] sm:text-[10vw] lg:text-[8vw] text-display leading-[0.85] flex flex-col translate-x-[-0.05em]">
+              <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[8vw] text-display leading-[0.85] flex flex-col translate-x-[-0.05em]">
                 <span className="animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
                   MD ALAU<span className="text-primary">DDIN</span>
                 </span>
-                <span className="text-muted-foreground animate-fade-in-up tracking-[0.5em] uppercase text-[3vw] sm:text-[2.2vw] lg:text-[1.4vw] font-black" style={{ animationDelay: "0.2s" }}>
+                <span className="text-muted-foreground animate-fade-in-up tracking-[0.5em] uppercase text-xs sm:text-sm md:text-base lg:text-[1.4vw] font-black mt-4" style={{ animationDelay: "0.2s" }}>
                   FULL STACK DEVELOPER
                 </span>
               </h1>
               
-              <div className="flex flex-col md:flex-row items-end gap-8 pt-8 md:pt-0">
-                 <p className="text-lg md:text-xl text-muted-foreground max-w-md animate-fade-in-up leading-relaxed order-2 md:order-1" style={{ animationDelay: "0.3s" }}>
+              <div className="flex flex-col md:flex-row items-end gap-8 pt-4 md:pt-0">
+                 <p className="text-base md:text-xl text-muted-foreground max-w-md animate-fade-in-up leading-relaxed order-2 md:order-1" style={{ animationDelay: "0.3s" }}>
                   Crafting high-performance digital ecosystems with precision and purpose. Turning complex problems into elegant architectural solutions.
                 </p>
               </div>
             </div>
 
-            {/* Sharp CTA Buttons */}
-            <div className="flex flex-wrap gap-0 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+            <div className="flex flex-col sm:flex-row gap-0 animate-fade-in-up w-full sm:w-auto" style={{ animationDelay: "0.4s" }}>
               <Button
                 size="lg"
-                className="group px-12 h-16 rounded-none bg-primary text-primary-foreground hover:bg-foreground hover:text-background transition-all duration-500 font-black uppercase tracking-widest text-xs"
-                onClick={(e) => handleSmoothScroll(e, "#projects")}
+                className="group px-8 sm:px-12 h-12 sm:h-16 rounded-none bg-primary text-primary-foreground hover:bg-foreground hover:text-background transition-all duration-500 font-black uppercase tracking-widest text-[10px] sm:text-xs w-full sm:w-auto"
+                asChild
               >
-                SELECTED WORKS
-                <ArrowRight className="ml-4 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                <a href="#projects">
+                  SELECTED WORKS
+                  <ArrowRight className="ml-4 w-4 h-4 sm:w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                </a>
               </Button>
 
               <Button
                 variant="outline"
                 size="lg"
-                className="group px-12 h-16 rounded-none border-y border-r border-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-500 font-black uppercase tracking-widest text-xs"
+                className="group px-8 sm:px-12 h-12 sm:h-16 rounded-none border sm:border-y sm:border-r border-foreground hover:bg-foreground/5 transition-all duration-500 font-black uppercase tracking-widest text-[10px] sm:text-xs w-full sm:w-auto"
                 asChild
               >
                 <a
