@@ -20,6 +20,11 @@
       "Engineering a reliable auto-grading engine for diverse quiz types",
       "Managing multi-role permissions across a shared platform"
     ],
+    "futurePlans": [
+      "Integrating AI-powered personalized learning paths",
+      "Implementing real-time collaborative code editor",
+      "Expanding to mobile app using React Native"
+    ],
     "screenshots": [
       "/thumnail/cm.png"
     ],
@@ -63,6 +68,11 @@
       "Integrating Stripe payment webhooks securely",
       "Optimizing database queries for performance"
     ],
+    "futurePlans": [
+      "Implementing AI-based price dynamic optimization",
+      "Adding multi-hotel support for chain management",
+      "Developing a dedicated guest mobile application"
+    ],
     "screenshots": [
       "/thumnail/royal-place.jpeg"
     ],
@@ -103,6 +113,11 @@
       "Developing a high-speed scanning engine for large-scale websites",
       "Managing real-time data flow for instant report generation",
       "Ensuring clean and actionable diagnostic output for non-technical users"
+    ],
+    "futurePlans": [
+      "Enhancing AI models for automated code fixing suggestions",
+      "Integrating CI/CD pipeline diagnostic triggers",
+      "Adding support for mobile web performance auditing"
     ],
     "screenshots": [
       "/thumnail/bug.png"

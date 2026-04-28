@@ -31,6 +31,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider attribute="class"
           defaultTheme="dark"
+          themes={["dark", "orange"]}
           enableSystem
           disableTransitionOnChange>
           <LenisProvider>

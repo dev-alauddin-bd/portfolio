@@ -45,27 +45,37 @@ export function About() {
   }, []);
 
   return (
-    <section id="about" className="py-32 relative overflow-hidden bg-background">
+    <section id="about" className="py-16 md:py-32 relative overflow-hidden bg-background">
       {/* Background Grid - Minimalist */}
       <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none"></div>
       
       <div className="container mx-auto px-6 sm:px-10 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 mb-32 items-start lg:items-end">
+        <div className="flex flex-col lg:flex-row gap-16 mb-16 md:mb-32 items-start lg:items-center">
             <div className="lg:w-1/2">
-              <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-6">/ PHILOSOPHY</span>
+              <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-6">/ GET TO KNOW ME</span>
               <h2 className="text-4xl sm:text-6xl lg:text-[7vw] text-display leading-none">
-                BUILDING <br />
-                FOR THE <br />
-                <span className="text-primary">FUTURE.</span>
+                MY <br />
+                STORY & <br />
+                <span className="text-primary">PASSION</span>
               </h2>
             </div>
-           <div className="lg:w-1/2 max-w-xl pb-4">
-              <p className="text-2xl font-medium leading-normal mb-8 border-l-4 border-primary pl-10 py-2">
-                I'm a digital architect specializing in high-performance full-stack ecosystems.
-              </p>
-              <p className="text-muted-foreground leading-relaxed pl-10">
-                My journey is defined by a relentless pursuit of technical excellence. I don't just build websites; I engineer scalable, efficient digital solutions that balance powerful logic with intuitive user interaction.
-              </p>
+           <div className="lg:w-1/2 max-w-xl">
+              <div className="space-y-6 border-l-4 border-primary pl-10 py-2">
+                <p className="text-xl md:text-2xl font-medium leading-tight">
+                  I'm a digital architect specializing in high-performance full-stack ecosystems.
+                </p>
+                <div className="space-y-4 text-muted-foreground leading-relaxed text-sm md:text-base">
+                  <p>
+                    My programming journey began with a curiosity about how the web works, which quickly turned into a passion for engineering scalable solutions. From writing my first line of "Hello World" to architecting complex enterprise applications, I've always been driven by the challenge of solving real-world problems through code.
+                  </p>
+                  <p>
+                    I thrive in environments that push technical boundaries. Whether it's optimizing a database schema for sub-second responses or crafting a pixel-perfect UI, I bring a meticulous approach to every layer of the stack.
+                  </p>
+                  <p>
+                    Outside the world of syntax and deployments, I find balance through <span className="text-foreground font-bold">exploring nature</span>, <span className="text-foreground font-bold">reading tech journals</span>, and staying active with <span className="text-foreground font-bold">football</span>. I believe a well-rounded perspective is the secret to innovative engineering.
+                  </p>
+                </div>
+              </div>
            </div>
         </div>
 
@@ -75,7 +85,7 @@ export function About() {
            <div className="md:col-span-2 lg:col-span-4 h-64 bg-foreground p-8 flex flex-col justify-between group overflow-hidden relative">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 translate-x-10 -translate-y-10 group-hover:translate-x-5 transition-transform duration-700"></div>
               <h4 className="text-background font-black text-6xl italic leading-none tabular-nums">02+</h4>
-              <p className="text-background/50 text-[10px] font-bold uppercase tracking-[0.3em]">Years of engineering complexity</p>
+              <p className="text-background/50 text-[10px] font-bold uppercase tracking-[0.3em]">Years of Professional Experience</p>
            </div>
 
            {/* Small Box 1 */}

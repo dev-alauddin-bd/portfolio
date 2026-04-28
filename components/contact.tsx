@@ -6,7 +6,7 @@ import toast, { Toaster } from "react-hot-toast"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, MapPin, Send, MessageCircle } from "lucide-react"
+import { Mail, MapPin, Send, MessageCircle, Phone } from "lucide-react"
 import Link from "next/link"
 
 import AOS from "aos"
@@ -77,7 +77,7 @@ export function Contact() {
     {
       icon: Mail,
       title: "Email",
-      value: "[EMAIL_ADDRESS]",
+      value: "muhammadalauddin24434@gmail.com",
       href: "mailto:muhammadalauddin24434@gmail.com",
     },
     {
@@ -92,26 +92,28 @@ export function Contact() {
       value: "+880 1635230838",
       href: "https://wa.me/8801635230838",
     },
+    {
+      icon: Phone,
+      title: "Phone",
+      value: "+880 1635230838",
+      href: "tel:+8801635230838",
+    },
   ]
 
   return (
-    <section id="contact" className="py-32 relative overflow-hidden bg-background">
+    <section id="contact" className="py-16 md:py-32 relative overflow-hidden bg-background">
       <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none"></div>
 
       <div className="container mx-auto px-6 sm:px-10 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 mb-24 items-baseline border-b border-foreground/10 pb-16">
+        <div className="flex flex-col lg:flex-row gap-16 mb-12 md:mb-24 items-baseline border-b border-foreground/10 pb-16">
           <div className="lg:w-1/2">
-            <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-6">/ INQUIRIES & INDEX</span>
+            <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-6">/ SAY HELLO</span>
             <h2 className="text-4xl sm:text-6xl lg:text-[7vw] text-display leading-none">
-              GET IN <br />
-              <span className="text-primary">TOUCH.</span>
+              LET'S <br />
+              <span className="text-primary">CONNECT</span>
             </h2>
           </div>
-          <div className="lg:w-1/2">
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-md">
-              Always open for ambitious collaborations and technical architectural challenges.
-            </p>
-          </div>
+          
         </div>
 
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-24">
@@ -126,7 +128,7 @@ export function Contact() {
                   className="group block space-y-2 border-l border-foreground/10 pl-6 sm:pl-10 hover:border-primary transition-all"
                 >
                   <p className="text-[10px] font-black uppercase tracking-[0.3em] text-primary">{info.title}</p>
-                  <p className="text-lg md:text-2xl font-black group-hover:italic transition-all">{info.value.toUpperCase()}</p>
+                  <p className="text-sm md:text-lg font-black group-hover:italic transition-all">{info.value}</p>
                 </a>
               ))}
             </div>
@@ -136,7 +138,7 @@ export function Contact() {
               <div className="flex flex-wrap gap-4">
                 {[
                   { name: "GITHUB", link: "https://github.com/alauddin24434" },
-                  { name: "LINKEDIN", link: "https://linkedin.com/in/md-alauddin" }
+                  { name: "LINKEDIN", link: "https://linkedin.com/in/md-alauddin" },
                 ].map((social, index) => (
                   <Link
                     key={index}
@@ -158,7 +160,7 @@ export function Contact() {
             <form onSubmit={handleSubmit} className="space-y-8 sm:space-y-12">
               <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
                 <div className="space-y-4">
-                  <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground">IDENTIFICATION</label>
+                  <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground">YOUR NAME</label>
                   <Input
                     name="name"
                     placeholder="FULL NAME"
@@ -169,7 +171,7 @@ export function Contact() {
                   />
                 </div>
                 <div className="space-y-4">
-                  <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground">COORDINATES</label>
+                  <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground">YOUR EMAIL</label>
                   <Input
                     name="email"
                     type="email"
@@ -183,7 +185,7 @@ export function Contact() {
               </div>
 
               <div className="space-y-4">
-                <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground">OBJECTIVE</label>
+                <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground">SUBJECT</label>
                 <Input
                   name="subject"
                   placeholder="COLLABORATION SUBJECT"
@@ -195,7 +197,7 @@ export function Contact() {
               </div>
 
               <div className="space-y-4">
-                <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground">V0.SPECIFICATION</label>
+                <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground">YOUR MESSAGE</label>
                 <Textarea
                   name="message"
                   placeholder="DESCRIBE THE PROJECT CHALLENGE..."
@@ -215,7 +217,7 @@ export function Contact() {
                 >
                   {isSubmitting ? "PROCESSING..." : (
                     <div className="flex items-center gap-6">
-                      TRANSMIT CORE
+                      SEND MESSAGE
                       <Send className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                     </div>
                   )}

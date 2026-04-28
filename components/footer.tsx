@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Github, Linkedin, Twitter, Mail, Heart, MapPin, Phone, ArrowUpRight, Globe, Zap } from "lucide-react"
 
 export function Footer() {
@@ -46,8 +47,8 @@ export function Footer() {
     {
       title: "Connect",
       links: [
-        { name: "GitHub", href: "https://github.com/dev-alauddin-bd", icon: Github },
-        { name: "LinkedIn", href: "https://www.linkedin.com/in/alauddin-dev", icon: Linkedin },
+        { name: "GitHub", href: "https://github.com/alauddin24434", icon: Github },
+        { name: "LinkedIn", href: "https://linkedin.com/in/md-alauddin", icon: Linkedin },
         { name: "Email Me", href: "mailto:muhammadalauddin24434@gmail.com", icon: Mail },
       ]
     }
@@ -66,8 +67,13 @@ export function Footer() {
           <div className="lg:col-span-5 space-y-8">
             <div className="space-y-6">
               <Link href="/" className="inline-flex items-center gap-4 group">
-                <div className="w-12 h-12 bg-primary flex items-center justify-center font-black italic text-2xl text-primary-foreground group-hover:rotate-12 transition-transform duration-500">
-                  A
+                <div className="relative w-12 h-12 group-hover:rotate-12 transition-transform duration-500">
+                  <Image
+                    src="/logo.png"
+                    alt="Logo"
+                    fill
+                    className="object-contain mix-blend-screen"
+                  />
                 </div>
                 <h2 className="text-3xl font-black tracking-tighter uppercase">
                   Alauddin<span className="text-primary">.</span>

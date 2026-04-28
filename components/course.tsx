@@ -26,6 +26,13 @@ export function CoursesAndCertifications() {
 
   const courses = [
     {
+      title: "Bachelor of Science in Computer Science & Engineering",
+      provider: "University of Barisal",
+      year: "2020 - 2024",
+      description:
+        "Focused on core computer science principles including Data Structures, Algorithms, Database Management Systems, and Software Engineering.",
+    },
+    {
       title: "Next Level Web Development Course",
       provider: "Programming Hero",
       year: "2024",
@@ -59,16 +66,16 @@ export function CoursesAndCertifications() {
   ]
 
   return (
-    <section id="education" className="py-32 relative overflow-hidden bg-background">
+    <section id="education" className="py-16 md:py-32 relative overflow-hidden bg-background">
       <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none"></div>
 
       <div className="container mx-auto px-10 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 mb-24 items-baseline pb-16">
+        <div className="flex flex-col lg:flex-row gap-16 mb-12 md:mb-24 items-baseline pb-16">
            <div className="lg:w-1/2">
-              <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-6">/ KNOWLEDGE BASE</span>
+              <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-6">/ LEARNING JOURNEY</span>
               <h2 className="text-4xl sm:text-6xl lg:text-[7vw] text-display leading-none">
-                GROWTH <br />
-                <span className="text-primary">& INDEX.</span>
+                EDUCATION <br />
+                <span className="text-primary">& COURSES</span>
               </h2>
            </div>
          
@@ -91,7 +98,7 @@ export function CoursesAndCertifications() {
               {courses.map((course, index) => (
                 <div
                   key={index}
-                  className="group flex flex-col md:flex-row gap-4 sm:gap-20 py-8 sm:py-12 border-b border-foreground/5 hover:bg-primary/5 transition-colors px-4"
+                  className="group flex flex-col md:flex-row gap-6 md:gap-20 py-8 md:py-12 border-b border-foreground/5 hover:bg-primary/5 transition-colors px-0 md:px-4"
                 >
                   <div className="md:w-32">
                      <span className="text-4xl font-black text-foreground/20 tabular-nums">{course.year}</span>
@@ -116,7 +123,7 @@ export function CoursesAndCertifications() {
               {certifications.map((cert, index) => (
                 <div
                   key={index}
-                  className="bg-background p-6 sm:p-12 space-y-8 group hover:bg-primary/5 transition-colors relative h-full flex flex-col"
+                  className="bg-background p-6 md:p-12 space-y-8 group hover:bg-primary/5 transition-colors relative h-full flex flex-col"
                 >
                    <div className="flex justify-between items-start">
                       <div className="text-4xl sm:text-6xl font-black text-foreground/5 italic">0{index + 1}</div>

@@ -30,6 +30,7 @@ interface Project {
   detailedDescription?: string;
   features?: string[];
   challenges?: string[];
+  futurePlans?: string[];
   screenshots?: string[];
   technologies: string[];
   role?: string;
@@ -224,6 +225,23 @@ export default function ProjectDetailPage() {
                       <div key={i} className="flex items-start gap-4 p-5 md:p-6 bg-orange-500/5 rounded-2xl border border-orange-500/10">
                         <AlertCircle className="h-5 w-5 md:h-6 md:w-6 text-orange-500 flex-shrink-0 mt-1" />
                         <p className="text-xs md:text-sm leading-relaxed">{challenge}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {project.futurePlans && (
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-black mb-8 tracking-tight flex items-center gap-4">
+                    Evolution & Roadmap
+                    <span className="h-0.5 flex-grow bg-gradient-to-r from-blue-500/30 to-transparent"></span>
+                  </h2>
+                  <div className="space-y-4">
+                    {project.futurePlans.map((plan, i) => (
+                      <div key={i} className="flex items-start gap-4 p-5 md:p-6 bg-blue-500/5 rounded-2xl border border-blue-500/10 group hover:bg-blue-500/10 transition-colors">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 group-hover:scale-150 transition-transform" />
+                        <p className="text-xs md:text-sm leading-relaxed">{plan}</p>
                       </div>
                     ))}
                   </div>

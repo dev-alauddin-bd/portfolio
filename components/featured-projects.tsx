@@ -38,7 +38,7 @@ export function FeaturedProjects() {
   const renderProjectCard = (project: any, index: number) => (
     <div
       key={project.id}
-      className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center group relative py-20 border-b border-foreground/10 last:border-none"
+      className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center group relative py-10 md:py-20 border-b border-foreground/10 last:border-none"
     >
       {/* Large Project Number */}
       <div className="absolute top-10 left-0 text-[100px] sm:text-[150px] lg:text-[15vw] font-black text-foreground/5 pointer-events-none select-none italic translate-x-[-0.2em]">
@@ -84,7 +84,7 @@ export function FeaturedProjects() {
             <span className="h-px w-10 bg-primary opacity-50"></span>
             <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px]">SELECTED PROJECT</span>
           </div>
-          <h3 className="text-2xl sm:text-4xl md:text-6xl font-black tracking-tighter leading-none group-hover:italic transition-all duration-500">
+          <h3 className="text-xl sm:text-4xl md:text-6xl font-black tracking-tighter leading-none group-hover:italic transition-all duration-500">
             {project.title.toUpperCase()}
           </h3>
         </div>
@@ -116,16 +116,16 @@ export function FeaturedProjects() {
   const displayProjects = projects.slice(0, 3);
 
   return (
-    <section id="projects" className="py-32 relative overflow-hidden bg-background">
+    <section id="projects" className="py-16 md:py-32 relative overflow-hidden bg-background">
       <div className="absolute inset-0 bg-grid opacity-10 pointer-events-none"></div>
 
       <div className="container mx-auto px-10 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 mb-24 items-start lg:items-end justify-between border-b border-foreground/10 py-16">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 mb-12 md:mb-24 items-start lg:items-end justify-between border-b border-foreground/10 pb-16">
           <div className="lg:w-1/2">
-            <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-6">/ RECENT WORK</span>
-            <h2 className="text-3xl sm:text-6xl lg:text-[7vw] text-display leading-none">
-              SELECTED <br />
-              EXHIBITS.
+            <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] block mb-6">/ MY WORK</span>
+            <h2 className="text-4xl sm:text-6xl lg:text-[7vw] text-display leading-none">
+              FEATURED <br />
+              <span className="text-primary">PROJECTS</span>
             </h2>
           </div>
      
